@@ -1,238 +1,345 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-size: 28px;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <style>
+    body, p, h3 {
+      margin: 0;
+      font-size: 28px;
+    }
 
-.header {
-    background-image: url('http://res.cloudinary.com/rhyjudd/image/upload/v1522950028/pexels-photo-597929_dztsfw.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0px 20px;
-    color: #FFF;
-    text-shadow: 1px 1px 3px black,
-                -1px 1px 3px black,
-                -1px -1px 3px black,
-                1px -1px 3px black;
+    a{
+      color: #fff;
+    }
 
-}
+    .header {
+      background-image: url('http://res.cloudinary.com/rhyjudd/image/upload/v1522950028/pexels-photo-597929_dztsfw.jpg');
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0px 20px;
+      color: #FFF;
+      text-shadow: 1px 1px 3px black,
+      -1px 1px 3px black,
+      -1px -1px 3px black,
+      1px -1px 3px black;
 
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+    }
 
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+    #navbar {
+      overflow: hidden;
+      background-color: #333;
 
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    }
 
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
+    #navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
-.content {
-  padding: 16px;
-}
+    #navbar a:hover {
+      background-color: #ddd;
+      color: #FFF;
+    }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+    #navbar a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
 
-.sticky + .content {
-  padding-top: 49px;
-}
-.image1, .image2{
-    position: relative;
-    opacity: 0.50;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    .content {
+      padding: 16px;
+    }
 
-    /*
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .sticky+.content {
+      padding-top: 49px;
+    }
+
+    .image1,
+    .image2 {
+      position: relative;
+      opacity: 0.50;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      /*
     fixed=parallax
     scroll=normal
     */
+      background-attachment: fixed;
+    }
 
-    background-attachment: fixed;
+
+    .image1 {
+      background-image: url("http://res.cloudinary.com/rhyjudd/image/upload/v1522953226/barista-barista-girl-business-702251_ucmiof.jpg");
+      min-height: 400px;
+    }
+
+    .image2 {
+      background-image: url("http://res.cloudinary.com/rhyjudd/image/upload/v1522953507/attractive-bar-barista-296888_gspqyt.jpg");
+      min-height: 400px;
+    }
+
+    #menu {
+      background-image: url("http://res.cloudinary.com/rhyjudd/image/upload/v1523264766/advertisement-1846965_1920_wyqdru.jpg");
+      display: flex;
+      justify-content: space-around;
+      color: #fff;
+      opacity: 1.30;
+      text-shadow: 1px 1px 3px black,
+      -1px 1px 3px black,
+      -1px -1px 3px black,
+      1px -1px 3px black;
+      flex-wrap: wrap;
+
+
+    }
+
+    .section {
+      background-image: url("http://res.cloudinary.com/rhyjudd/image/upload/v1523264766/advertisement-1846965_1920_wyqdru.jpg");
+      color: #fff;
+      opacity: 1.30;
+      text-shadow: 1px 1px 3px black,
+      -1px 1px 3px black,
+      -1px -1px 3px black,
+      1px -1px 3px black;
+    }
+
+    .menu {
+      margin: 20px;
+      padding: 10px;
+      min-width: 340px;
+    }
+
+    #contact{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #socialMedia{
+      margin: 10px;
+      
+    }
+    .row{
+      display: flex; 
+      flex-direction: row;
+      
+      
+    }
+    img{
+      max-width: 400px;
+      height: auto;
+      float: left;
+      margin: 10px;
+    }
+
+    .right{
+      float: right;
+    }
+
+    .section h3{
+      text-align:center;
+      padding: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
 }
 
+    
+    
+    
+    
 
-.image1{
-    background-image:url("http://res.cloudinary.com/rhyjudd/image/upload/v1522953226/barista-barista-girl-business-702251_ucmiof.jpg");
-    min-height:400px; 
-}
-
-.image2{
-    background-image:url("http://res.cloudinary.com/rhyjudd/image/upload/v1522953507/attractive-bar-barista-296888_gspqyt.jpg");
-    min-height:400px;
-}
-
-#menu{
-  background-image:url("http://res.cloudinary.com/rhyjudd/image/upload/v1523264766/advertisement-1846965_1920_wyqdru.jpg");
-  display: flex;
-  justify-content: space-around;
-  color: #fff;
-  opacity: 1.30;
-  text-shadow: 1px 1px 3px black,
-                -1px 1px 3px black,
-                -1px -1px 3px black,
-                1px -1px 3px black;
-  flex-wrap: wrap;
- 
-
-}
-
-.section{
-  background-image:url("http://res.cloudinary.com/rhyjudd/image/upload/v1523264766/advertisement-1846965_1920_wyqdru.jpg");
-  color: #fff;
-  opacity: 1.30;
-  text-shadow: 1px 1px 3px black,
-                -1px 1px 3px black,
-                -1px -1px 3px black,
-                1px -1px 3px black;
-}
-
-.menu{
-  margin: 20px;
-  padding: 10px;
-  min-width: 340px;
-}
-
-</style>
+  </style>
 </head>
+
 <body>
 
-<div class="header">
-  <h1>The Ozark Coffee House</h1>
-  <p>Welcome</p>
-</div>
-
-<div class='nav-wrapper' style='height:49px;'>
-<div id="navbar">
-  <a class="active" href="javascript:void(0)">Home</a>
-  <a href="javascript:void(0)">Menu</a>
-  <a href="javascript:void(0)">News</a>
-  <a href="javascript:void(0)">Contact</a>
-</div>
-</div>
-
-<div class='section' id='menu'>
-  <div class="menu">
-    <h3>coffee</h3>
-    <table>
-      <tr><td>House Brew</td>   <td>$1.99</td></tr>
-      <tr><td>Espresso</td>     <td>$1.99</td></tr>
-      <tr><td>Macchiato</td>    <td>$2.98</td></tr>
-      <tr><td>Cappuchino</td>   <td>$3.45</td></tr>
-      <tr><td>Au Lait</td>      <td>$3.45</td></tr>
-      <tr><td>Latte</td>        <td>$3.45</td></tr>
-      <tr><td>Mocha</td>        <td>$3.75</td></tr>
-    </table>
+  <div class="header">
+    <h1>The Ozark Coffee House</h1>
+    <p>Welcome</p>
   </div>
-  <div class="menu">
-    <h3>Tea</h3>
-    <table>
-      <tr><td>Cold Brew</td>    <td>$1.99</td></tr>
-      <tr><td>Hot Tea</td>      <td>$1.99</td></tr>
-      <tr><td>Chai</td>         <td>$2.98</td></tr>
-      <tr><td>Lemonade</td>     <td>$3.45</td></tr>
-      <tr><td>Hot Cider</td>    <td>$3.45</td></tr>
-      
-    </table>
+
+  <div class='nav-wrapper' style='height:49px;'>
+    <div id="navbar" class='section'>
+      <a href="javascript:void(0)">Home</a>
+      <a href="javascript:void(0)">Menu</a>
+      <a href="javascript:void(0)">News</a>
+      <a href="javascript:void(0)">Contact</a>
+    </div>
   </div>
-  <div class="menu">
-    <h3>Food</h3>
-    <table>
-      <tr><td>Grilled Cheese</td>    <td>$1.99</td></tr>
-      <tr><td>Bacon Egg & Cheese</td><td>$1.99</td></tr>
-      <tr><td>Bagels</td>            <td>$2.98</td></tr>
-      <tr><td>Muffins</td>           <td>$3.45</td></tr>
-      <tr><td>Turkey BLT</td>        <td>$3.45</td></tr>
-      <tr><td>Daily Soup</td>        <td>$3.45</td></tr>
-      
-    </table>
+
+  <div class='section' id='menu'>
+    <div class="menu">
+      <!-- this is the menu location -->
+      <h3>coffee</h3>
+      <table>
+        <tr>
+          <td>House Brew</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Espresso</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Macchiato</td>
+          <td>$2.98</td>
+        </tr>
+        <tr>
+          <td>Cappuchino</td>
+          <td>$3.45</td>
+        </tr>
+        <tr>
+          <td>Au Lait</td>
+          <td>$3.45</td>
+        </tr>
+        <tr>
+          <td>Latte</td>
+          <td>$3.45</td>
+        </tr>
+        <tr>
+          <td>Mocha</td>
+          <td>$3.75</td>
+        </tr>
+      </table>
+    </div>
+    <div class="menu">
+      <h3>Tea</h3>
+      <table>
+        <tr>
+          <td>Cold Brew</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Hot Tea</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Chai</td>
+          <td>$2.98</td>
+        </tr>
+        <tr>
+          <td>Lemonade</td>
+          <td>$3.45</td>
+        </tr>
+        <tr>
+          <td>Hot Cider</td>
+          <td>$3.45</td>
+        </tr>
+
+      </table>
+    </div>
+    <div class="menu">
+      <h3>Food</h3>
+      <table>
+        <tr>
+          <td>Grilled Cheese</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Bacon Egg & Cheese</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Bagels</td>
+          <td>$2.98</td>
+        </tr>
+        <tr>
+          <td>Muffins</td>
+          <td>$3.45</td>
+        </tr>
+        <tr>
+          <td>Turkey BLT</td>
+          <td>$3.45</td>
+        </tr>
+        <tr>
+          <td>Daily Soup</td>
+          <td>$3.45</td>
+        </tr>
+
+      </table>
+    </div>
   </div>
-</div>
 
-<div class='image1'></div>
+  <div class='image1'></div>
 
-<div class='section' id='news'>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa officiis nesciunt aliquid eligendi voluptatum ullam possimus porro quae repellat exercitationem? Error nihil perferendis sapiente adipisci quasi eum veniam alias rerum!
-  Possimus et, doloribus asperiores reiciendis, provident vel ad quis ratione iusto, quod quo dolorum! Accusamus ullam fuga modi doloremque perferendis totam obcaecati quas. Nisi saepe praesentium natus dignissimos ab sequi.
-  Vitae voluptatibus eaque eveniet dolores itaque, nihil ex fugiat vero deleniti et, provident accusamus, ratione quo facilis repellat voluptate? Asperiores voluptate culpa autem aspernatur perspiciatis, veritatis harum facere aperiam mollitia.
-  Excepturi repellendus impedit, iusto culpa, adipisci perferendis architecto asperiores temporibus earum laudantium alias voluptate dolore esse officiis nulla! Tempora architecto sint ratione qui quod quas unde inventore quaerat, officia vitae!
-  Esse culpa nulla eius maxime iure distinctio! Impedit in sequi explicabo excepturi, hic quod placeat quasi fugiat cumque aliquid voluptas commodi, veniam modi repudiandae consequuntur. Alias accusantium illum natus possimus.
-  Labore, laudantium? Architecto, iste illo quam at ipsa similique unde? Ad, aut aperiam? Tenetur sunt quasi cupiditate soluta tempore doloremque voluptatum facere, quibusdam delectus consectetur pariatur animi est quis hic.
-  Commodi hic officia distinctio nesciunt perspiciatis quam tenetur ex veritatis cumque, dolorum soluta? Excepturi beatae ducimus quidem, provident quia dolores deserunt repellendus cum architecto necessitatibus ullam illum, impedit tenetur temporibus.
-  Magni unde cupiditate vero perferendis dignissimos fuga magnam, praesentium necessitatibus corrupti sint ipsa facere illum error quia, temporibus sunt minima quibusdam labore voluptate! Eligendi doloribus hic, saepe praesentium tenetur perspiciatis.
-  Totam ipsa molestias consequatur delectus deleniti dignissimos ratione suscipit tempora nostrum exercitationem animi ipsum, doloremque iusto ad eius illo culpa provident rerum. Dolores fuga qui accusamus deleniti? Magni, possimus cumque?
-  Et distinctio tempore asperiores, dolores saepe dolorum deserunt ipsam qui, eum aspernatur error, quos minus aut atque incidunt! Culpa ex incidunt pariatur nam at praesentium quasi vero facere nulla error!
-  Est, possimus rem quidem adipisci qui ipsum nam? Molestiae iusto aperiam mollitia quod autem eligendi, earum perspiciatis qui, eum blanditiis explicabo animi architecto, amet fugit in. Cumque accusantium officia veritatis!
-  Nam, a natus deleniti aliquam ratione laboriosam fugiat repellat dolorum sint nemo odio harum deserunt? Nesciunt beatae dignissimos pariatur, error similique eaque, delectus, quia reprehenderit animi eius repellat aut at.
-  Dolor corrupti nihil ratione esse architecto ab minima natus tempore repellat, exercitationem hic labore. Vitae repellat ipsa velit cumque perferendis minus, eius earum libero tempora labore, necessitatibus modi voluptate aut?
-  In nostrum excepturi, cupiditate temporibus officia fugit soluta minima, itaque animi voluptatem dolorum commodi veniam modi ipsa voluptates id eligendi qui odio doloremque cumque, mollitia obcaecati. Neque sunt quos nesciunt.
-  Maxime animi doloribus non beatae totam sapiente ea possimus quibusdam dolor, at mollitia laudantium iste repellendus dolorum? Doloremque sit magnam beatae aut aspernatur iure ad suscipit dicta, et at illum!
-  Fugiat itaque officiis tempore ad alias amet molestias dolorem, veritatis voluptatem! Harum mollitia est delectus sit labore vero quia minima iusto aliquid. Debitis labore a molestiae explicabo fugiat minima distinctio.
-  In sint accusantium debitis sapiente, commodi minima ab consequatur neque maxime suscipit quasi ipsa enim tenetur veritatis ullam facere qui culpa animi non voluptatibus necessitatibus. Ducimus soluta natus maiores fugit.
-  Explicabo natus, dolorum porro aut, molestiae nam amet iusto pariatur repudiandae dolores sequi quae error. Delectus numquam explicabo nam, corporis illo hic porro assumenda modi vero consequuntur necessitatibus unde libero?
-  Eveniet aperiam minima cumque itaque iusto magnam reiciendis reprehenderit necessitatibus id cum vitae praesentium quidem eos, eligendi nesciunt corporis dolor soluta repellendus accusamus possimus ab maxime voluptas provident? Explicabo, molestiae.
-  Voluptatibus consequuntur voluptatem, praesentium repellendus vitae minus atque corporis numquam inventore adipisci dolorum maiores, hic iure, eveniet architecto nisi explicabo necessitatibus non qui harum fugiat? Esse quae facilis quidem doloribus.
-</div>
+  <div class='section' id='news'>
+    <h3>Upcoming Events</h3>
+    <div class="row">
+      <div class="image"><img src="http://res.cloudinary.com/rhyjudd/image/upload/v1523638522/people-woman-coffee-meeting_usm4f4.jpg" alt=""></div>
+      <div class="content"><h4>Date of event</h4>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et eaque non quam eum incidunt quidem architecto omnis fugit? Aliquam cupiditate vero voluptates, ex earum iusto repellendus adipisci quis itaque debitis!Aliquid cumque reprehenderit voluptas! Aperiam, delectus? Maiores culpa necessitatibus tempore, amet tempora itaque dolorem perferendis facere minus impedit fugiat velit quas inventore deserunt, sequi quod id ad a quisquam incidunt?</div>
+    </div>
+    <div class="row">
+      <div class="content"><h4>Date of event</h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, unde nobis qui maxime vel, itaque eligendi blanditiis dignissimos, ut illo asperiores! Sunt, dolor laboriosam. Molestiae culpa quae impedit in sed?Non earum dicta, optio nihil voluptatem ipsum ad pariatur animi maxime corporis esse ab. Eius ipsum repudiandae at laborum molestiae omnis quibusdam pariatur alias voluptates, aut ducimus rem tenetur libero.</div>
+      <div class="image"><img class='right' src="http://res.cloudinary.com/rhyjudd/image/upload/v1523638517/pexels-photo_qaoanz.jpg" alt=""></div>
+    </div>
+    
+  </div>
 
-<div class='image2'></div>
+  <div class='image2'></div>
 
-<div class='section' id='contactUs'></div>
+  <div class="section" id='contact'>
+    <!-- this is where you put your relevant contact information -->
+    <h3>Reach Out to Us</h3>
+    <p>(479)555-555 </p>
+    <p>ozarkcoffeeshop@gmail.com</p>
+    
+    <!-- this is where you link to your social media outlets -->
+    <span id='socialMedia' ><a href="#facebook"><i class="fab fa-facebook-square"></i></a> <a href="#instagram"><i class="fab fa-instagram"></i></a> <a href="#googlePlus"><i class="fab fa-google-plus-square"></i></a></span>
 
-<div class="section">
-  <h3>Sticky Navigation Example</h3>
-  <p>The navbar will stick to the top when you reach its scroll position.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-</div>
 
-<script>
-window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+  </div>
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
+
+
+
+
+  <script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 
 </body>
+
 </html>
